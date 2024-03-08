@@ -11,3 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 [Tool for comparing performance of different CSS solutions](https://necolas.github.io/react-native-web/benchmarks/)
 
 ### Exercise 1 - FAQ components
+
+### Global Styles - resets
+
+[Eric Meyer](https://meyerweb.com/eric/tools/css/reset/)

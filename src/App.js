@@ -1,3 +1,4 @@
+import GlobalStyles from './GlobalStyles';
 import LoginForm from './LoginForm';
 import styled from 'styled-components';
 
@@ -43,6 +44,7 @@ const App = () => (
         alert('Submitted!');
       }}
     />
+    <GlobalStyles />
   </>
 );
 

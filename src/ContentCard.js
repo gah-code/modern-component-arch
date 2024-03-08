@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 function ContentCard({ avatarSrc, name, email }) {
   return (
-    <article className='content-card'>
-      <img src={avatarSrc} alt='' className='avatar' />
-      <h2>{name}</h2>
-      <p>{email}</p>
-    </article>
+    <Wrapper className='content-card'>
+      <Avatar src={avatarSrc} alt='' className='avatar' />
+      <Name>{name}</Name>
+      <Email>{email}</Email>
+    </Wrapper>
   );
 }
 
@@ -18,5 +18,11 @@ const Wrapper = styled.article`
   box-shadow: 0px 2px 20px hsl(248deg 53% 40%);
   text-align: center;
 `;
+
+const Avatar = styled.img``;
+
+const Name = styled.h2``;
+
+const Email = styled.p``;
 
 export default ContentCard;
