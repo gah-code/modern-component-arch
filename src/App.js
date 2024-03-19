@@ -2,6 +2,7 @@ import GlobalStyles from './GlobalStyles';
 import LoginForm from './LoginForm';
 import FrequentlyAskedQuestion from './FrequentlyAskedQuestions';
 import ContentCard from './ContentCard';
+import Button from './Buttons';
 
 const App = () => (
   <>
@@ -20,6 +21,7 @@ const App = () => (
       name='Mittens'
       email='meow@gmail.com'
     />
+    <Button color='green'>Hello world</Button>
     <GlobalStyles />
   </>
 );
