@@ -1,6 +1,7 @@
 import GlobalStyles from './GlobalStyles';
 import LoginForm from './LoginForm';
 import FrequentlyAskedQuestion from './FrequentlyAskedQuestions';
+import ContentCard from './ContentCard';
 
 const App = () => (
   <>
@@ -13,6 +14,11 @@ const App = () => (
         ev.preventDefault();
         alert('Submitted!');
       }}
+    />
+    <ContentCard
+      avatarSrc='https://courses.joshwcomeau.com/cfj-mats/cat-300px.jpg'
+      name='Mittens'
+      email='meow@gmail.com'
     />
     <GlobalStyles />
   </>
