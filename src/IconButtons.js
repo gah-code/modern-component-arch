@@ -7,4 +7,4 @@ const IconButtons = () => {
 export default IconButtons;
 
 // delegated object:
-// rototypal Delegation
+// prototypal Delegation
