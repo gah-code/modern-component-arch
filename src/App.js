@@ -3,6 +3,7 @@ import LoginForm from './LoginForm';
 import FrequentlyAskedQuestion from './FrequentlyAskedQuestions';
 import ContentCard from './ContentCard';
 import Button from './Buttons';
+import WallArt from './WallArt';
 
 const App = () => (
   <>
@@ -22,6 +23,12 @@ const App = () => (
       email='meow@gmail.com'
     />
     <Button color='green'>Hello world</Button>
+    <WallArt
+      src='https://courses.joshwcomeau.com/cfj-mats/wall-art.jpg'
+      alt='A hallway with rainbow lights'
+      caption='Photo by Efe Kurnaz'
+      width={250}
+    />
     <GlobalStyles />
   </>
 );

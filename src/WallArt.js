@@ -1,23 +1,27 @@
 import styled from 'styled-components';
 
 function WallArt({ src, alt, caption, width }) {
-  const height = width;
+  const aspectRatio = 3 / 2;
+  const height = width * aspectRatio;
+
   return (
-    <Wrapper className='wall-art-wrapper'>
-      <img
+    <Wrapper>
+      <Photo
         src={src}
         alt={alt}
         style={{
-          width,
-          height,
+          '--width': width + 'px',
+          '--height': height + 'px',
         }}
       />
-      <p className='caption'>{caption}</p>
+      <Caption className='caption'>{caption}</Caption>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
   padding: 8px;
   position: relative;
   isolation: isolate;
@@ -29,3 +33,23 @@ const Wrapper = styled.div`
     0 -15px 40px -20px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
 `;
+
+const Photo = styled.img`
+  display: block;
+  border-radius: 4px;
+  width: var(--width);
+  height: var(--height);
+`;
+
+const Caption = styled.p`
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  text-align: center;
+  padding: 8px;
+  background: hsl(0deg 0% 100% / 0.9);
+  backdrop-filter: blur(10px);
+`;
+
+export default WallArt;
