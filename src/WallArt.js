@@ -22,7 +22,7 @@ function WallArt({ src, alt, caption, width }) {
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  padding: 8px;
+  padding: 20px 8px;
   position: relative;
   isolation: isolate;
   background: white;
@@ -32,6 +32,8 @@ const Wrapper = styled.div`
     0 21.4px 24.5px -2px rgba(0, 0, 0, 0.073),
     0 -15px 40px -20px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto;
 `;
 
 const Photo = styled.img`

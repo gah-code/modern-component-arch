@@ -17,6 +17,8 @@ const Wrapper = styled.article`
   background: white;
   box-shadow: 0px 2px 20px hsl(248deg 53% 40%);
   text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
 `;
 
 const Avatar = styled.img`
