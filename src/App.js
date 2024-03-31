@@ -4,6 +4,8 @@ import FrequentlyAskedQuestion from './FrequentlyAskedQuestions';
 import ContentCard from './ContentCard';
 import Button from './Buttons';
 import WallArt from './WallArt';
+import Breadcrumbs from './Breadcrumbs';
+import Crumb from './Crumb';
 import styled from 'styled-components';
 
 const Divider = styled.div`
@@ -12,6 +14,15 @@ const Divider = styled.div`
 
 const App = () => (
   <>
+    <Breadcrumbs>
+      <Crumb href='/'>Home</Crumb>
+      <Crumb href='/living'>Living Room</Crumb>
+      <Crumb href='/living/couch'>Couches</Crumb>
+      <Crumb href='/living/couch/sectional' isCurrentPage={true}>
+        Sectionals
+      </Crumb>
+    </Breadcrumbs>
+    <Divider />
     <FrequentlyAskedQuestion
       question='What does “CSS” stand for?'
       answer='Cool Styling Strategy'
