@@ -2,10 +2,12 @@ import GlobalStyles from './GlobalStyles';
 import LoginForm from './LoginForm';
 import FrequentlyAskedQuestion from './FrequentlyAskedQuestions';
 import ContentCard from './ContentCard';
-import Button from './Buttons';
+// import Button from './Buttons';
 import WallArt from './WallArt';
 import Breadcrumbs from './Breadcrumbs';
 import Crumb from './Crumb';
+import ButtonTable from './ButtonTable';
+
 import styled from 'styled-components';
 
 const Divider = styled.div`
@@ -14,6 +16,10 @@ const Divider = styled.div`
 
 const App = () => (
   <>
+    <Divider />
+    <ButtonTable />
+    <Divider />
+
     <Breadcrumbs>
       <Crumb href='/'>Home</Crumb>
       <Crumb href='/living'>Living Room</Crumb>
@@ -41,7 +47,7 @@ const App = () => (
       email='meow@gmail.com'
     />
     <Divider />
-    <Button color='green'>Hello world</Button>
+    {/* <Button color='green'>Hello world</Button> */}
     <Divider />
     <WallArt
       src='https://courses.joshwcomeau.com/cfj-mats/wall-art.jpg'
