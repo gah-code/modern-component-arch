@@ -15,3 +15,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Global Styles - resets
 
 [Eric Meyer](https://meyerweb.com/eric/tools/css/reset/)
+
+[responsive accessible table](https://adrianroselli.com/2017/11/a-responsive-accessible-table.html#Example)

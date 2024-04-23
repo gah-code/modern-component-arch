@@ -19,6 +19,52 @@ const ButtonTable = () => {
             Button
           </Button>
         </td>
+        <td>
+          <Button size='small' variant='outline'>
+            Button
+          </Button>
+        </td>
+        <td>
+          <Button size='small' variant='outline'>
+            Button
+          </Button>
+        </td>
+      </tr>
+      <tr>
+        <td>Medium</td>
+        <td>
+          <Button size='medium' variant='fill'>
+            Button
+          </Button>
+        </td>
+        <td>
+          <Button size='medium' variant='outline'>
+            Button
+          </Button>
+        </td>
+        <td>
+          <Button size='medium' variant='ghost'>
+            Button
+          </Button>
+        </td>
+      </tr>
+      <tr>
+        <td>Large</td>
+        <td>
+          <Button size='large' variant='fill'>
+            Button
+          </Button>
+        </td>
+        <td>
+          <Button size='large' variant='outline'>
+            Button
+          </Button>
+        </td>
+        <td>
+          <Button size='large' variant='ghost'>
+            Button
+          </Button>
+        </td>
       </tr>
     </Table>
   );
@@ -32,6 +78,13 @@ const Table = styled.table`
   }
   th {
     border-bottom: 1px solid hsl(0deg 0% 80%);
+  }
+  td:first-of-type,
+  th:first-of-type {
+    border-right: 1px solid hsl(0deg, 0%, 80%);
+  }
+  td:first-of-type {
+    text-align: right;
   }
 `;
 
