@@ -25,7 +25,7 @@ const ButtonTable = () => {
           </Button>
         </td>
         <td>
-          <Button size='small' variant='outline'>
+          <Button size='small' variant='ghost'>
             Button
           </Button>
         </td>

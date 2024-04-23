@@ -3,6 +3,10 @@ import styled from 'styled-components';
 
 import { COLORS } from './constants';
 
+// 1rem
+// 1.125rem
+/// 1.3125rem
+
 const SIZES = {
   small: {
     '--borderRadius': 2 + 'px',
@@ -23,15 +27,66 @@ const SIZES = {
 
 const Button = ({ variant, size, children }) => {
   const styles = SIZES[size];
-  return <ButtonElem style={styles}>{children}</ButtonElem>;
+
+  let Component;
+  if (variant === 'fill') {
+    Component = FillButton;
+  } else if (variant === 'outline') {
+    Component = OutlineButton;
+  } else if (variant === 'ghost') {
+    Component = GhostButton;
+  } else {
+    throw new Error(`Unrecognized Button variant: ${variant}`);
+  }
+
+  return <Component style={styles}>{children}</Component>;
 };
 
-const ButtonElem = styled.button`
+const ButtonBase = styled.button`
   font-size: var(--fontSize);
   padding: var(--padding);
   border-radius: var(--borderRadius);
-  border: none;
+  border: 2px solid transparent;
+
+  /* background-color: ${COLORS.primary}; */
+  /* color: ${COLORS.white}; */
+
+  &:focus {
+    outline-color: ${COLORS.primary};
+    outline-offset: 4px;
+  }
+`;
+
+const FillButton = styled(ButtonBase)`
   background-color: ${COLORS.primary};
   color: ${COLORS.white};
+
+  &:hover {
+    background-color: ${COLORS.primaryLight};
+  }
 `;
+
+const OutlineButton = styled(ButtonBase)`
+  background-color: ${COLORS.white};
+  color: ${COLORS.primary};
+  border: 2px solid currentColor;
+
+  &:hover {
+    background-color: ${COLORS.offwhite};
+  }
+`;
+const GhostButton = styled(ButtonBase)`
+  color: ${COLORS.gray};
+  background-color: transparent;
+
+  &:focus {
+    outline-color: ${COLORS.gray};
+  }
+
+  &:hover {
+    background: ${COLORS.transparentGray15};
+    color: ${COLORS.black};
+  }
+`;
+
 export default Button;

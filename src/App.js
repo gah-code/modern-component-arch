@@ -2,13 +2,13 @@ import GlobalStyles from './GlobalStyles';
 import LoginForm from './LoginForm';
 import FrequentlyAskedQuestion from './FrequentlyAskedQuestions';
 import ContentCard from './ContentCard';
+import styled from 'styled-components';
+
 // import Button from './Buttons';
 import WallArt from './WallArt';
 import Breadcrumbs from './Breadcrumbs';
 import Crumb from './Crumb';
 import ButtonTable from './ButtonTable';
-
-import styled from 'styled-components';
 
 const Divider = styled.div`
   padding: 3rem 0;
