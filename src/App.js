@@ -1,26 +1,36 @@
 import GlobalStyles from './GlobalStyles';
-import LoginForm from './LoginForm';
-import FrequentlyAskedQuestion from './FrequentlyAskedQuestions';
-import ContentCard from './ContentCard';
 import styled from 'styled-components';
-
-// import Button from './Buttons';
-import WallArt from './WallArt';
-import Breadcrumbs from './Breadcrumbs';
-import Crumb from './Crumb';
 import ButtonTable from './ButtonTable';
+import Breadcrumbs from './module-3/Breadcrumbs';
+import Crumb from './module-3/Crumb';
 
 const Divider = styled.div`
-  padding: 3rem 0;
+  padding: 4rem 0;
 `;
 
 const App = () => (
   <>
+    <Breadcrumbs>
+      <Crumb href='/'>Home</Crumb>
+      <Crumb to='/living' href='/living'>
+        Living Room
+      </Crumb>
+      <Crumb href='/living/couch'>Couches</Crumb>
+      <Crumb href='/living/couch/sectional' isCurrentPage={true}>
+        Sectionals
+      </Crumb>
+    </Breadcrumbs>
     <Divider />
     <ButtonTable />
     <Divider />
+    <GlobalStyles />
+  </>
+);
 
-    <Breadcrumbs>
+export default App;
+
+{
+  /* <Breadcrumbs>
       <Crumb href='/'>Home</Crumb>
       <Crumb href='/living'>Living Room</Crumb>
       <Crumb href='/living/couch'>Couches</Crumb>
@@ -47,16 +57,12 @@ const App = () => (
       email='meow@gmail.com'
     />
     <Divider />
-    {/* <Button color='green'>Hello world</Button> */}
+
     <Divider />
     <WallArt
       src='https://courses.joshwcomeau.com/cfj-mats/wall-art.jpg'
       alt='A hallway with rainbow lights'
       caption='Photo by Efe Kurnaz'
       width={250}
-    />
-    <GlobalStyles />
-  </>
-);
-
-export default App;
+    /> */
+}

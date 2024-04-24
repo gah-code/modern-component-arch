@@ -17,3 +17,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 [Eric Meyer](https://meyerweb.com/eric/tools/css/reset/)
 
 [responsive accessible table](https://adrianroselli.com/2017/11/a-responsive-accessible-table.html#Example)
+
+# Buttons
+
+[the as prop](https://styled-components.com/docs/api#as-polymorphic-prop)
+
+### Escape Hatches
+
+- Escape hatches are tools that allow us to break free of the constraints that normally serve us well.
+
+[Contextual Styles](https://ellodave.dev/blog/article/contextual-css-and-the-problems-therein/)
